@@ -8,7 +8,7 @@ export function HeroStatement() {
       <div className="home-copy" aria-label="Introduction">
         <span className="home-text" style={{ "--delay": 0 } as React.CSSProperties}>
           Yo! I&apos;m{" "}
-          <Reveal label="Vishal">
+          <Reveal label="Vishal Dhuper">
             . I&apos;m not sure how to intro myself{" "}
             <Reveal label="anymore">
               . My background is in media analysis, but I love everything related to{" "}
