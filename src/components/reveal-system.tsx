@@ -7,6 +7,7 @@ import {
   useEffect,
   useId,
   useMemo,
+  useRef,
   useState,
 } from "react";
 
@@ -83,6 +84,8 @@ export function Reveal({ children, defaultOpen = false, label }: RevealProps) {
   const unregister = context?.unregister;
   const id = useId();
   const [open, setOpen] = useState(defaultOpen);
+  const [highlighted, setHighlighted] = useState(false);
+  const highlightTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     register?.(id, defaultOpen);
@@ -91,8 +94,31 @@ export function Reveal({ children, defaultOpen = false, label }: RevealProps) {
   }, [defaultOpen, id, register, unregister]);
 
   useEffect(() => {
+    return () => {
+      if (highlightTimeout.current) {
+        clearTimeout(highlightTimeout.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
     setItemOpen?.(id, open);
   }, [id, open, setItemOpen]);
+
+  const handleClick = () => {
+    const nextOpen = !open;
+
+    if (highlightTimeout.current) {
+      clearTimeout(highlightTimeout.current);
+    }
+
+    setHighlighted(nextOpen);
+    setOpen(nextOpen);
+
+    if (nextOpen) {
+      highlightTimeout.current = setTimeout(() => setHighlighted(false), 900);
+    }
+  };
 
   return (
     <span className="reveal-node" data-state={open ? "open" : "closed"}>
@@ -100,9 +126,10 @@ export function Reveal({ children, defaultOpen = false, label }: RevealProps) {
         aria-controls={`${id}-content`}
         aria-expanded={open}
         className="reveal-trigger"
+        data-highlighted={highlighted ? "true" : undefined}
         data-state={open ? "open" : "closed"}
         type="button"
-        onClick={() => setOpen((current) => !current)}
+        onClick={handleClick}
       >
         {label}
       </button>

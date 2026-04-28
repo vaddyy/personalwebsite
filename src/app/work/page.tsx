@@ -12,49 +12,44 @@ const workItems = [
   {
     title: "Cision",
     description:
-      "Where I turn coverage, social chatter, and brand noise into the kind of insight a team can actually move with.",
-    meta: "2024 - Now",
-    href: "https://www.cision.com/",
+      "My current home for media intelligence. I spend the day reading the room at scale, then shrinking it back down to what a brand should notice, remember, or do next.",
+    meta: "Now",
   },
   {
     title: "Coca-Cola",
     description:
-      "Tracking peaks, sentiment shifts, and the little public signals that tell you when a brand has entered the room.",
+      "Big-brand listening with plenty of texture: rituals, reactions, campaigns, culture, and the tiny shifts that show when attention has actually moved.",
     meta: "Media intelligence",
-    href: "https://www.coca-colacompany.com/",
   },
   {
     title: "The LEGO Group",
     description:
-      "Narrative mapping, audience signals, and keeping an eye on how playful ideas travel once the internet gets hold of them.",
-    meta: "Social listening",
-    href: "https://www.lego.com/",
+      "A brand where play does serious work. I look for how nostalgia, creativity, parents, collectors, and communities quietly shape the bigger picture.",
+    meta: "Audience read",
   },
   {
     title: "Skyscanner",
     description:
-      "Travel stories, competitor movement, and the useful difference between what gets covered and what gets remembered.",
+      "Travel has its own mood. With Skyscanner, the useful bit is often spotting what people are planning, avoiding, dreaming about, or suddenly reconsidering.",
     meta: "Brand tracking",
-    href: "https://www.skyscanner.net/",
   },
   {
     title: "Motorsport + wellbeing",
     description:
-      "Two very different worlds, both full of signals: speed, care, reputation, communities, and surprisingly human patterns.",
+      "Very different rooms, same instinct. One moves on pace and spectacle; the other on trust and care. Both need the noise translated properly.",
     meta: "Client mix",
   },
   {
     title: "Tealfeed",
     description:
-      "Content strategy with momentum: more engagement, more organic traffic, and sharper reasons for people to come back.",
-    meta: "2022",
-    href: "https://tealfeed.com/",
+      "A startup chapter where I learned how growth feels up close: scrappy plans, faster feedback, better distribution, and a lot of useful experiments.",
+    meta: "Growth",
   },
   {
     title: "Dab of India",
     description:
-      "Campaigns, social calendars, customer behaviour, and the early lesson that beautiful ideas still need proof.",
-    meta: "2021",
+      "The early agency muscle. Campaign calendars, social behaviour, client needs, and the lesson that taste matters, but proof makes the room quieter.",
+    meta: "Campaigns",
   },
 ];
 
@@ -63,7 +58,7 @@ export default function WorkPage() {
     <SiteShell>
       <InteriorPage
         title="Work"
-        description="I work somewhere between strategy and sense-making. A lot of it starts messy: coverage, comments, dashboards, competitor moves, tiny clues. Then I pull it into a story that feels useful."
+        description="This is the paid-to-be-curious bit. I work with brands, culture, and public reaction, then turn the messy middle into something clear enough for a team to trust."
         items={workItems}
       />
     </SiteShell>

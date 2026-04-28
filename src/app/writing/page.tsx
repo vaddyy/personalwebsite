@@ -12,39 +12,38 @@ const writingItems = [
   {
     title: "Greenwashing in Fashion",
     description:
-      "A dissertation about what brands say, what people believe, and where sustainable marketing starts to sound a bit too polished.",
+      "My Kingston dissertation looked at the gap between sustainable language and public trust. The interesting part was not the claim, but whether people believed it.",
     meta: "Kingston",
   },
   {
-    title: "Stories From Data",
+    title: "Insight Narratives",
     description:
-      "The work-report kind of writing: coverage peaks, sentiment shifts, and one clean paragraph that makes the whole room nod.",
+      "The kind of writing that has to be calm, sharp, and useful. Less decoration, more finding the one sentence that makes a messy finding land.",
     meta: "Cision",
   },
   {
-    title: "Content That Travelled",
+    title: "Content Engines",
     description:
-      "At Tealfeed, writing became distribution, SEO, community, and a steady little engine for 120% more organic traffic.",
+      "At Tealfeed, writing was not just publishing. It was choosing angles, shaping pages, improving search, and giving readers a better reason to stay.",
     meta: "Tealfeed",
-    href: "https://tealfeed.com/",
   },
   {
-    title: "Campaign Notes",
+    title: "Post-Campaign Truths",
     description:
-      "What worked, what did not, and the surprisingly useful habit of admitting both before the next post goes live.",
+      "I like the honest bit after a campaign: what pulled people in, what quietly missed, and what the next idea should learn before it gets too confident.",
     meta: "Dab of India",
   },
   {
-    title: "Brand Platforms",
+    title: "Brand Thinking",
     description:
-      "The more formal side of the same obsession: positioning, loyalty, consumer behaviour, and finding the sentence a brand can stand on.",
-    meta: "Marketing",
+      "Positioning, loyalty, behaviour, promise. The formal words are fine, but the useful work is finding the thought a brand can keep returning to.",
+    meta: "Strategy",
   },
   {
-    title: "Thoughtful Overthinking",
+    title: "Small Edits",
     description:
-      "My favourite mode, honestly. A half-note, a better headline, a sharper angle, and suddenly the thing has a pulse.",
-    meta: "Always",
+      "A headline gets tighter. A paragraph loses its wobble. A deck stops sounding like a deck. Tiny changes, weirdly large effect.",
+    meta: "Ongoing",
   },
 ];
 
@@ -53,7 +52,7 @@ export default function WritingPage() {
     <SiteShell>
       <InteriorPage
         title="Writing"
-        description="Writing is where I clean up the mess in my head. Sometimes it becomes strategy, sometimes content, sometimes a report. The aim is usually the same: make the point feel obvious after someone reads it."
+        description="Writing is how I make a thought behave. Sometimes it is research, sometimes copy, sometimes a line in a deck that does more work than the chart underneath it."
         items={writingItems}
       />
     </SiteShell>

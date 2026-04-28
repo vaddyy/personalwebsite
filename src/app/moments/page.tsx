@@ -13,38 +13,37 @@ const momentItems = [
   {
     title: "Coffee",
     description:
-      "A proper daily ritual, and occasionally a small excuse to document cups, counters, cafes, and the colour brown doing good work.",
+      "The daily ceremony. I like the counter, the cup, the first sip, and the oddly specific happiness of finding a place that gets the small things right.",
     meta: "@broonbrown",
-    href: profileLinks.broonbrown,
   },
   {
     title: "London",
     description:
-      "Where I currently live, walk, listen, people-watch, and pretend every quick errand is research for something.",
+      "A good city for noticing things. Someone's tote bag, a shop window, a half-heard sentence, a street that looks different after rain.",
     meta: "Now",
   },
   {
-    title: "Slow Starts",
+    title: "Morning Bias",
     description:
-      "Some days begin with notes before notifications. Those are usually the better ones, even if the coffee is doing most of the labour.",
+      "I am better when the day starts before the phone does. Coffee first, a few notes, then the world can start making requests.",
     meta: "Mornings",
   },
   {
-    title: "Ahmednagar to Pune",
+    title: "Home Coordinates",
     description:
-      "Small-town roots, Pune years, and the kind of distance that makes you notice what has quietly stayed with you.",
-    meta: "Home-ish",
+      "Ahmednagar gave me the small-town base note. Pune added the student years, work years, and a lot of the early figuring-it-out.",
+    meta: "India",
   },
   {
     title: "Little Patterns",
     description:
-      "I like spotting what repeats: the line in a conversation, the thing people order, the angle a story keeps trying to become.",
+      "I collect repeats without meaning to: what people order, what they complain about, how a room changes when one person walks in.",
     meta: "Daily",
   },
   {
     title: "Good Detours",
     description:
-      "Coffee shops, bookshops, side streets, half-planned walks, and the very necessary art of doing something for no KPI whatsoever.",
+      "Side streets, second coffees, bookstores, long walks, and the very necessary art of doing something that does not need to become productive.",
     meta: "Often",
   },
 ];
@@ -56,8 +55,8 @@ export default function MomentsPage() {
         title="Moments"
         description={
           <>
-            The non-work bit is mostly coffee, walks, small observations, and saving little proof that the day happened. More coffee
-            lives on{" "}
+            Away from work, I am usually walking, noticing, over-ordering coffee, or taking a small day too seriously in the best way.
+            The coffee archive lives on{" "}
             <a className="page-inline-link" href={profileLinks.broonbrown} rel="noreferrer" target="_blank">
               @broonbrown
             </a>

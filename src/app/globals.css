@@ -3,9 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --accent: #ff4921;
+  --accent: #00a8ff;
+  --accent-contrast: #031018;
   --black: #000000;
   --header-gradient-height: 100px;
+  --pill-open-bg: #eeeef0;
+  --pill-open-text: #121113;
   --scaling: 1;
   --space-4: calc(16px * var(--scaling));
   --space-6: calc(32px * var(--scaling));
@@ -15,6 +18,12 @@
   --home-line-height: calc(36px * var(--scaling));
   --home-max-width: 1136px;
   --text-opacity: 1;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  :root {
+    --accent: color(display-p3 0 0.66 1);
+  }
 }
 
 @media (min-width: 768px) {
@@ -231,6 +240,7 @@ a:focus-visible {
 }
 
 .reveal-trigger {
+  --ring-color: currentColor;
   display: inline-block;
   position: relative;
   padding: 0 0.4em;
@@ -254,14 +264,23 @@ a:focus-visible {
 }
 
 .reveal-trigger[data-state="open"] {
-  color: #121113;
-  border-color: #eeeef0;
-  background: #eeeef0;
+  --ring-color: var(--pill-open-bg);
+  color: var(--pill-open-text);
+  border-color: var(--pill-open-bg);
+  background: var(--pill-open-bg);
+}
+
+.reveal-trigger[data-highlighted="true"] {
+  --ring-color: var(--accent);
+  color: var(--accent-contrast);
+  border-color: var(--accent);
+  background: var(--accent);
 }
 
 .reveal-trigger:hover,
 .reveal-trigger[data-state="open"]:focus-visible {
-  color: #191111;
+  --ring-color: var(--accent);
+  color: var(--accent-contrast);
   border-color: var(--accent);
   background: var(--accent);
 }
@@ -269,7 +288,7 @@ a:focus-visible {
 .reveal-trigger:focus-visible {
   box-shadow:
     0 0 0 1px #000000,
-    0 0 0 3px currentColor;
+    0 0 0 3px var(--ring-color);
 }
 
 .reveal-content {
@@ -294,6 +313,24 @@ a:focus-visible {
   filter: none;
   opacity: 1;
   animation: reveal 600ms ease both;
+}
+
+.reveal-trigger[data-highlighted="true"] + .reveal-content[data-state="open"],
+.reveal-trigger[data-state="open"]:focus-visible + .reveal-content[data-state="open"] {
+  color: var(--accent);
+}
+
+@media (hover: hover) {
+  .reveal-trigger[data-state="open"]:hover + .reveal-content[data-state="open"] {
+    color: var(--accent);
+  }
+
+  .reveal-trigger[data-state="open"]:hover + .reveal-content[data-state="open"] .reveal-trigger[data-state="open"],
+  .reveal-trigger[data-highlighted="true"] + .reveal-content[data-state="open"] .reveal-trigger[data-state="open"] {
+    color: var(--accent-contrast);
+    border-color: var(--accent);
+    background: var(--accent);
+  }
 }
 
 .serif-italic {
@@ -508,6 +545,8 @@ a:focus-visible {
   }
 
   .home-link,
+  .page-inline-link,
+  .page-list-link,
   .reveal-content,
   .reveal-trigger,
   .site-nav-link {
