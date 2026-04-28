@@ -9,8 +9,8 @@
   --scaling: 1;
   --space-4: calc(16px * var(--scaling));
   --space-6: calc(32px * var(--scaling));
-  --font-serif: var(--font-editorial-new), Georgia, "Times New Roman", serif;
-  --font-sans: var(--font-neue-montreal), "Helvetica Neue", Arial, system-ui, sans-serif;
+  --font-serif: "Editorial New Local", Georgia, "Times New Roman", serif;
+  --font-sans: "Neue Montreal Local", "Helvetica Neue", Arial, system-ui, sans-serif;
   --home-font-size: calc(28px * var(--scaling));
   --home-line-height: calc(36px * var(--scaling));
   --home-max-width: 1136px;

@@ -1,30 +1,7 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 
-const neueMontreal = localFont({
-  src: "../../public/fonts/neue-montreal-regular.otf",
-  variable: "--font-neue-montreal",
-  weight: "400",
-  display: "swap",
-});
-
-const editorialNew = localFont({
-  src: [
-    {
-      path: "../../public/fonts/EditorialNew-Regular.woff2",
-      style: "normal",
-      weight: "400",
-    },
-    {
-      path: "../../public/fonts/pp-editorial-new-italic.otf",
-      style: "italic",
-      weight: "400",
-    },
-  ],
-  variable: "--font-editorial-new",
-  display: "swap",
-});
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export const metadata: Metadata = {
   title: "Vishal Dhuper | Creative Marketing Professional",
@@ -39,7 +16,31 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${neueMontreal.variable} ${editorialNew.variable}`}>{children}</body>
+      <head>
+        <link
+          rel="preload"
+          href={`${basePath}/fonts/neue-montreal-regular.otf`}
+          as="font"
+          type="font/otf"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href={`${basePath}/fonts/EditorialNew-Regular.woff2`}
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href={`${basePath}/fonts/pp-editorial-new-italic.otf`}
+          as="font"
+          type="font/otf"
+          crossOrigin="anonymous"
+        />
+        <link rel="stylesheet" href={`${basePath}/fonts.css`} />
+      </head>
+      <body>{children}</body>
     </html>
   );
 }

@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Neue Montreal Local";
+  src: url("./fonts/neue-montreal-regular.otf") format("opentype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Editorial New Local";
+  src:
+    url("./fonts/EditorialNew-Regular.woff2") format("woff2"),
+    url("./fonts/EditorialNew-Regular.woff") format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Editorial New Local";
+  src: url("./fonts/pp-editorial-new-italic.otf") format("opentype");
+  font-display: swap;
+  font-style: italic;
+  font-weight: 400;
+}
