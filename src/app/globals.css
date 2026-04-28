@@ -51,6 +51,9 @@ body {
   font-family: var(--font-sans);
   font-weight: 400;
   letter-spacing: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -128,7 +131,6 @@ a:focus-visible {
   font-weight: 400;
   line-height: calc(24px * var(--scaling));
   color: rgba(255, 255, 255, 0.82);
-  filter: blur(0.25px);
 }
 
 .site-nav-link {
@@ -204,7 +206,6 @@ a:focus-visible {
 .home-text {
   display: inline;
   color: rgba(255, 255, 255, var(--text-opacity));
-  filter: blur(0.25px);
   animation: show 600ms ease both;
   animation-delay: calc(160ms * var(--delay));
 }
@@ -290,7 +291,7 @@ a:focus-visible {
 }
 
 .reveal-content[data-state="open"] {
-  filter: blur(0);
+  filter: none;
   opacity: 1;
   animation: reveal 600ms ease both;
 }
@@ -327,7 +328,7 @@ a:focus-visible {
   }
 
   100% {
-    filter: blur(0);
+    filter: none;
   }
 }
 
