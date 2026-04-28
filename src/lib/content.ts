@@ -1,0 +1,18 @@
+export const navItems = ["Home", "Writing", "Speaking", "Shooting"];
+
+export const profileLinks = {
+  email: "mailto:vishalldhuper@gmail.com",
+  linkedin: "https://linkedin.com/in/vishal-dhuper-3584a5165",
+};
+
+export const ambientLines = [
+  "media intelligence social listening campaign measurement stakeholder-ready reporting",
+  "Coca-Cola LEGO Group Skyscanner motorsport health wellbeing competitor positioning",
+  "Brandwatch BuzzSumo Cision Power BI Google Analytics Excel Salesforce",
+  "share of voice sentiment shifts peaks narratives audience insight emerging themes",
+  "creative marketing professional content strategy SEO A/B testing lead tracking CRM",
+  "London Kingston University marketing brand management greenwashing fashion industry",
+  "Tealfeed engagement growth organic traffic omnichannel distribution campaign ROI",
+  "Dab of India Instagram engagement follower growth customer behaviour reporting",
+  "data QA validation dashboards automation concise recommendations senior stakeholders",
+];
