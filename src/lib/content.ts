@@ -1,6 +1,12 @@
-export const navItems = ["Home", "Writing", "Speaking", "Shooting"];
+export const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/work", label: "Work" },
+  { href: "/writing", label: "Writing" },
+  { href: "/moments", label: "Moments" },
+];
 
 export const profileLinks = {
+  broonbrown: "https://www.instagram.com/broonbrown/",
   email: "mailto:vishalldhuper@gmail.com",
   linkedin: "https://linkedin.com/in/vishal-dhuper-3584a5165",
 };
