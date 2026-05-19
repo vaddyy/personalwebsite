@@ -1,0 +1,9 @@
+1:"$Sreact.fragment"
+2:I[7121,[],""]
+3:I[4581,[],""]
+:HL["/personalwebsite/_next/static/css/f87603094ef752fd.css","style"]
+:HL["/personalwebsite/fonts/neue-montreal-regular.otf","font",{"crossOrigin":"anonymous","type":"font/otf"}]
+:HL["/personalwebsite/fonts/EditorialNew-Regular.woff2","font",{"crossOrigin":"anonymous","type":"font/woff2"}]
+:HL["/personalwebsite/fonts/pp-editorial-new-italic.otf","font",{"crossOrigin":"anonymous","type":"font/otf"}]
+:HL["/personalwebsite/fonts.css","style"]
+0:{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/personalwebsite/_next/static/css/f87603094ef752fd.css","precedence":"next"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":[["$","link",null,{"rel":"preload","href":"/personalwebsite/fonts/neue-montreal-regular.otf","as":"font","type":"font/otf","crossOrigin":"anonymous"}],["$","link",null,{"rel":"preload","href":"/personalwebsite/fonts/EditorialNew-Regular.woff2","as":"font","type":"font/woff2","crossOrigin":"anonymous"}],["$","link",null,{"rel":"preload","href":"/personalwebsite/fonts/pp-editorial-new-italic.otf","as":"font","type":"font/otf","crossOrigin":"anonymous"}],["$","link",null,{"rel":"stylesheet","href":"/personalwebsite/fonts.css"}]]}],["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]}]]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"1XvQV8FCSfp7uP2Y2CBf6"}

@@ -1,0 +1,6 @@
+:HL["/personalwebsite/_next/static/css/f87603094ef752fd.css","style"]
+:HL["/personalwebsite/fonts/neue-montreal-regular.otf","font",{"crossOrigin":"anonymous","type":"font/otf"}]
+:HL["/personalwebsite/fonts/EditorialNew-Regular.woff2","font",{"crossOrigin":"anonymous","type":"font/woff2"}]
+:HL["/personalwebsite/fonts/pp-editorial-new-italic.otf","font",{"crossOrigin":"anonymous","type":"font/otf"}]
+:HL["/personalwebsite/fonts.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"moments","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"1XvQV8FCSfp7uP2Y2CBf6"}
