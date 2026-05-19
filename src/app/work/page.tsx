@@ -10,45 +10,51 @@ export const metadata: Metadata = {
 
 const workItems = [
   {
-    title: "Cision",
+    title: "Cision / Signal Practice",
     description:
-      "My current home for media intelligence. I spend the day reading the room at scale, then shrinking it back down to what a brand should notice, remember, or do next.",
+      "Current home. I read coverage, social noise and competitor movement, then turn it into the kind of calm note a team can use.",
     meta: "Now",
   },
   {
-    title: "Coca-Cola",
+    title: "Coca-Cola / Everyday Rituals",
     description:
-      "Big-brand listening with plenty of texture: rituals, reactions, campaigns, culture, and the tiny shifts that show when attention has actually moved.",
-    meta: "Media intelligence",
+      "With a brand that big, the interesting thing is rarely scale itself. It is the tiny public ritual: a bottle, a joke, a campaign, a memory.",
+    meta: "Culture",
   },
   {
-    title: "The LEGO Group",
+    title: "The LEGO Group / Serious Play",
     description:
-      "A brand where play does serious work. I look for how nostalgia, creativity, parents, collectors, and communities quietly shape the bigger picture.",
-    meta: "Audience read",
+      "A brick can carry parents, collectors, nostalgia, creativity and community. The work is noticing which feeling is driving the story.",
+    meta: "Community",
   },
   {
-    title: "Skyscanner",
+    title: "Skyscanner / Travel Weather",
     description:
-      "Travel has its own mood. With Skyscanner, the useful bit is often spotting what people are planning, avoiding, dreaming about, or suddenly reconsidering.",
-    meta: "Brand tracking",
+      "Searches have moods. Dreaming, delaying, comparing, panic-booking, saving for later. I like finding the weather underneath the intent.",
+    meta: "Intent",
   },
   {
-    title: "Motorsport + wellbeing",
+    title: "Motorsport / Fast Theatre",
     description:
-      "Very different rooms, same instinct. One moves on pace and spectacle; the other on trust and care. Both need the noise translated properly.",
-    meta: "Client mix",
+      "Speed is only the surface. Under it: loyalty, rivalry, spectacle, sponsorship, risk, and a fandom that never sits still.",
+    meta: "Reputation",
   },
   {
-    title: "Tealfeed",
+    title: "Health + Wellbeing / Care Language",
     description:
-      "A startup chapter where I learned how growth feels up close: scrappy plans, faster feedback, better distribution, and a lot of useful experiments.",
+      "A quieter category with sharper stakes. Trust, proof, doubt and reassurance matter more than making the loudest claim.",
+    meta: "Trust",
+  },
+  {
+    title: "Tealfeed / Momentum Desk",
+    description:
+      "The startup chapter. Angles, search, distribution, feedback, content experiments, and learning how fast a small win can teach.",
     meta: "Growth",
   },
   {
-    title: "Dab of India",
+    title: "Dab of India / Campaign Floor",
     description:
-      "The early agency muscle. Campaign calendars, social behaviour, client needs, and the lesson that taste matters, but proof makes the room quieter.",
+      "Early agency muscles: calendars, client notes, social behaviour, and the useful pain of seeing which ideas survive the week.",
     meta: "Campaigns",
   },
 ];
@@ -58,7 +64,7 @@ export default function WorkPage() {
     <SiteShell>
       <InteriorPage
         title="Work"
-        description="This is the paid-to-be-curious bit. I work with brands, culture, and public reaction, then turn the messy middle into something clear enough for a team to trust."
+        description="Work is the room-reading bit. Newsrooms, comment sections, client questions, competitor noise. I listen for the one thing a brand can actually use."
         items={workItems}
       />
     </SiteShell>

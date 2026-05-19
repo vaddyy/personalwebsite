@@ -11,39 +11,45 @@ export const metadata: Metadata = {
 
 const momentItems = [
   {
-    title: "Coffee",
+    title: "The First Cup",
     description:
-      "The daily ceremony. I like the counter, the cup, the first sip, and the oddly specific happiness of finding a place that gets the small things right.",
+      "Not a personality trait, unfortunately still a ritual. Counter, cup, first sip, the small theatre of a place getting the basics right.",
     meta: "@broonbrown",
   },
   {
-    title: "London",
+    title: "Broon Brown",
     description:
-      "A good city for noticing things. Someone's tote bag, a shop window, a half-heard sentence, a street that looks different after rain.",
-    meta: "Now",
+      "A little coffee archive for cups I remembered, corners I liked, and places that understood the assignment without announcing it.",
+    meta: "Archive",
   },
   {
-    title: "Morning Bias",
+    title: "London On Foot",
     description:
-      "I am better when the day starts before the phone does. Coffee first, a few notes, then the world can start making requests.",
+      "The best version of the city is between plans: tote bags, shop windows, odd signage, wet pavements, someone saying something perfect.",
+    meta: "Walks",
+  },
+  {
+    title: "The Quiet Start",
+    description:
+      "The day is kinder before notifications. A few notes, a slower brain, then everyone else can begin emailing.",
     meta: "Mornings",
   },
   {
-    title: "Home Coordinates",
+    title: "Home Notes",
     description:
-      "Ahmednagar gave me the small-town base note. Pune added the student years, work years, and a lot of the early figuring-it-out.",
-    meta: "India",
+      "Ahmednagar is the base note. Pune is the chapter with early freedom. London is the sentence that changed tense.",
+    meta: "Places",
   },
   {
-    title: "Little Patterns",
+    title: "Almost Photos",
     description:
-      "I collect repeats without meaning to: what people order, what they complain about, how a room changes when one person walks in.",
-    meta: "Daily",
+      "Light on a table, a good wrapper, coffee before it cools, one strange sign. Proof that the small stuff keeps happening.",
+    meta: "Camera roll",
   },
   {
-    title: "Good Detours",
+    title: "The Useless Detour",
     description:
-      "Side streets, second coffees, bookstores, long walks, and the very necessary art of doing something that does not need to become productive.",
+      "Bookshops, second coffees, side streets, no lesson. A healthy little refusal to optimise the whole day.",
     meta: "Often",
   },
 ];
@@ -55,8 +61,7 @@ export default function MomentsPage() {
         title="Moments"
         description={
           <>
-            Away from work, I am usually walking, noticing, over-ordering coffee, or taking a small day too seriously in the best way.
-            The coffee archive lives on{" "}
+            Moments is the non-work archive: coffee, walks, tiny rituals, and the kind of noticing that does not need to become a report. Coffee lives on{" "}
             <a className="page-inline-link" href={profileLinks.broonbrown} rel="noreferrer" target="_blank">
               @broonbrown
             </a>

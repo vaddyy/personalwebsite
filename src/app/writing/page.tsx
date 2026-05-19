@@ -10,40 +10,40 @@ export const metadata: Metadata = {
 
 const writingItems = [
   {
-    title: "Greenwashing in Fashion",
+    title: "Greenwashing, Without The Fog",
     description:
-      "My Kingston dissertation looked at the gap between sustainable language and public trust. The interesting part was not the claim, but whether people believed it.",
-    meta: "Kingston",
+      "My Kingston dissertation looked at sustainable fashion claims and the fragile moment where belief either arrives or quietly leaves.",
+    meta: "Research",
   },
   {
-    title: "Insight Narratives",
+    title: "The Sentence Under The Chart",
     description:
-      "The kind of writing that has to be calm, sharp, and useful. Less decoration, more finding the one sentence that makes a messy finding land.",
-    meta: "Cision",
+      "The part I care about in reports: the one line that makes the finding obvious without making it feel flattened.",
+    meta: "Insights",
   },
   {
-    title: "Content Engines",
+    title: "Hooks That Earn A Click",
     description:
-      "At Tealfeed, writing was not just publishing. It was choosing angles, shaping pages, improving search, and giving readers a better reason to stay.",
-    meta: "Tealfeed",
+      "At Tealfeed, writing meant building better doors: useful headlines, search-friendly angles and reasons to keep reading.",
+    meta: "Content",
   },
   {
-    title: "Post-Campaign Truths",
+    title: "After The Campaign",
     description:
-      "I like the honest bit after a campaign: what pulled people in, what quietly missed, and what the next idea should learn before it gets too confident.",
-    meta: "Dab of India",
+      "The honest note after the rush: what travelled, what dragged, what surprised us, and what the next brief should inherit.",
+    meta: "Learning",
   },
   {
-    title: "Brand Thinking",
+    title: "Brand Lines",
     description:
-      "Positioning, loyalty, behaviour, promise. The formal words are fine, but the useful work is finding the thought a brand can keep returning to.",
-    meta: "Strategy",
+      "I like the sentence a brand can return to. Plain enough to say out loud, specific enough to be worth keeping.",
+    meta: "Positioning",
   },
   {
-    title: "Small Edits",
+    title: "The Last Pass",
     description:
-      "A headline gets tighter. A paragraph loses its wobble. A deck stops sounding like a deck. Tiny changes, weirdly large effect.",
-    meta: "Ongoing",
+      "Cut the wobble. Keep the pulse. Make the paragraph sound like a person thought about it, not like a template escaped.",
+    meta: "Editing",
   },
 ];
 
@@ -52,7 +52,7 @@ export default function WritingPage() {
     <SiteShell>
       <InteriorPage
         title="Writing"
-        description="Writing is how I make a thought behave. Sometimes it is research, sometimes copy, sometimes a line in a deck that does more work than the chart underneath it."
+        description="Writing is where I make the messy thing behave. Not by making it fancy; by making it smaller, truer, and easier to carry."
         items={writingItems}
       />
     </SiteShell>
