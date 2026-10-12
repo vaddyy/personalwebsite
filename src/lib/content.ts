@@ -6,6 +6,7 @@ export const navItems = [
 ];
 
 export const profileLinks = {
+  instagram: "https://www.instagram.com/vishaldhuper/",
   broonbrown: "https://www.instagram.com/broonbrown/",
   email: "mailto:vishalldhuper@gmail.com",
   linkedin: "https://linkedin.com/in/vishal-dhuper-3584a5165",
