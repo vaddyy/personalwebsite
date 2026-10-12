@@ -3,7 +3,7 @@ import { Reveal } from "@/components/reveal-system";
 
 export function HeroStatement() {
   return (
-    <main className="home-stage">
+    <main className="home-stage" id="main-content" tabIndex={-1}>
       <h1 className="sr-only">Vishal Dhuper, creative marketing and media intelligence professional</h1>
       <div className="home-copy" aria-label="Introduction">
         <span className="home-text" style={{ "--delay": 0 } as React.CSSProperties}>
@@ -66,11 +66,15 @@ export function HeroStatement() {
         <span className="home-text" id="contact" style={{ "--delay": 3 } as React.CSSProperties}>
           You can find me on{" "}
           <Reveal label="LinkedIn">
-            , where my profile is{" "}
+            . Here&apos;s my{" "}
             <a className="home-link" href={profileLinks.linkedin} rel="noreferrer" target="_blank">
-              here
+              profile
             </a>
-            . I&apos;m also on Instagram, or you can drop me an{" "}
+            . I&apos;m also on{" "}
+            <a className="home-link" href={profileLinks.instagram} rel="noreferrer" target="_blank">
+              Instagram
+            </a>
+            , or you can drop me an{" "}
             <a className="home-link" href={profileLinks.email}>
               email
             </a>

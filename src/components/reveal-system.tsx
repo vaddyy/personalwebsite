@@ -133,7 +133,7 @@ export function Reveal({ children, defaultOpen = false, label }: RevealProps) {
       >
         {label}
       </button>
-      <span className="reveal-content" data-state={open ? "open" : "closed"} id={`${id}-content`}>
+      <span className="reveal-content" data-state={open ? "open" : "closed"} id={`${id}-content`} inert={!open} aria-hidden={!open}>
         {children}
       </span>
     </span>

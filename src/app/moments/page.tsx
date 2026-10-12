@@ -1,75 +1,23 @@
 import type { Metadata } from "next";
-
-import { InteriorPage } from "@/components/interior-page";
 import { SiteShell } from "@/components/site-shell";
+import { CaseDetails, ChapterLabel, PageFooter, PageHeading } from "@/components/portfolio";
 import { profileLinks } from "@/lib/content";
 
-export const metadata: Metadata = {
-  title: "Moments",
-  description: "Coffee, London days, and small observations by Vishal Dhuper.",
-};
-
-const momentItems = [
-  {
-    title: "The First Cup",
-    description:
-      "Not a personality trait, unfortunately still a ritual. Counter, cup, first sip, the small theatre of a place getting the basics right.",
-    meta: "@broonbrown",
-  },
-  {
-    title: "Broon Brown",
-    description:
-      "A little coffee archive for cups I remembered, corners I liked, and places that understood the assignment without announcing it.",
-    meta: "Archive",
-  },
-  {
-    title: "London On Foot",
-    description:
-      "The best version of the city is between plans: tote bags, shop windows, odd signage, wet pavements, someone saying something perfect.",
-    meta: "Walks",
-  },
-  {
-    title: "The Quiet Start",
-    description:
-      "The day is kinder before notifications. A few notes, a slower brain, then everyone else can begin emailing.",
-    meta: "Mornings",
-  },
-  {
-    title: "Home Notes",
-    description:
-      "Ahmednagar is the base note. Pune is the chapter with early freedom. London is the sentence that changed tense.",
-    meta: "Places",
-  },
-  {
-    title: "Almost Photos",
-    description:
-      "Light on a table, a good wrapper, coffee before it cools, one strange sign. Proof that the small stuff keeps happening.",
-    meta: "Camera roll",
-  },
-  {
-    title: "The Useless Detour",
-    description:
-      "Bookshops, second coffees, side streets, no lesson. A healthy little refusal to optimise the whole day.",
-    meta: "Often",
-  },
-];
+export const metadata: Metadata = { title: "Moments | Vishal Dhuper", description: "Coffee, small detours and the everyday bits. A few personal notes by Vishal Dhuper." };
 
 export default function MomentsPage() {
-  return (
-    <SiteShell>
-      <InteriorPage
-        title="Moments"
-        description={
-          <>
-            Moments is the non-work archive: coffee, walks, tiny rituals, and the kind of noticing that does not need to become a report. Coffee lives on{" "}
-            <a className="page-inline-link" href={profileLinks.broonbrown} rel="noreferrer" target="_blank">
-              @broonbrown
-            </a>
-            .
-          </>
-        }
-        items={momentItems}
-      />
-    </SiteShell>
-  );
+  return <SiteShell><main className="portfolio portfolio-moments" id="main-content" tabIndex={-1}>
+    <PageHeading title="Moments" folio="Away from the work">Not everything needs a brief.<br />Some things are just <em>good parts of a day.</em></PageHeading>
+    <section className="moment-piece" aria-labelledby="coffee-title">
+      <ChapterLabel number="01">Usually starts here</ChapterLabel>
+      <div className="moment-text"><h2 id="coffee-title">Just a coffee.<br /><em>Famous last words.</em></h2><div><p>I usually go in for one thing. Then there&apos;s a good table, something in the pastry case, and suddenly I&apos;m staying a little longer.</p><p>The coffee matters. So does having nowhere urgent to be for the next twenty minutes.</p><a className="text-link" href={profileLinks.broonbrown} target="_blank" rel="noreferrer">The coffee gets its own page / @broonbrown <span aria-hidden="true">&#8599;</span></a></div></div>
+      <CaseDetails label="And then, probably another coffee."><p className="moment-afterthought">I like the bits around the cup as much as the cup itself. The chairs, the light, the decision to order something else. A small stop that turns into the nicest part of the afternoon.</p></CaseDetails>
+    </section>
+    <section className="moment-piece" aria-labelledby="detour-title">
+      <ChapterLabel number="02">On the way somewhere</ChapterLabel>
+      <div className="moment-text"><h2 id="detour-title">A small detour.<br /><em>No particular reason.</em></h2><div><p>A quieter street. A window worth stopping at. The long way back when the short way would have been perfectly fine.</p><p>I spend enough of my day trying to make sense of things. It&apos;s nice to let a few of them just be interesting.</p><a className="text-link" href={profileLinks.instagram} target="_blank" rel="noreferrer">The everyday bits / Instagram <span aria-hidden="true">&#8599;</span></a></div></div>
+      <CaseDetails label="Not everything has to turn into something."><p className="moment-afterthought">Sometimes the point is just that I noticed it. No useful takeaway, no big explanation. I liked it, and that was enough.</p></CaseDetails>
+    </section>
+    <PageFooter next="Back to the introduction" href="/" />
+  </main></SiteShell>;
 }
