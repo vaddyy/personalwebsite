@@ -24,7 +24,7 @@ export function SiteNav({ showCounter = false }: SiteNavProps) {
 
             return (
               <li key={item.href}>
-                <a className="site-nav-link" data-active={currentPath === item.href} href={href}>
+                <a className="site-nav-link" data-active={item.href === "/" ? currentPath === "/" : currentPath.startsWith(item.href)} aria-current={(item.href === "/" ? currentPath === "/" : currentPath.startsWith(item.href)) ? "page" : undefined} href={href}>
                   {item.label}
                 </a>
               </li>

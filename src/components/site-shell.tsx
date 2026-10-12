@@ -11,7 +11,8 @@ type SiteShellProps = {
 
 export function SiteShell({ children, showCounter = false, withVideo = false }: SiteShellProps) {
   return (
-    <div className="page-frame">
+    <div className={`page-frame${withVideo ? "" : " interior-frame"}`}>
+      <a className="skip-link" href="#main-content">Skip to content</a>
       <SiteNav showCounter={showCounter} />
       {withVideo ? (
         <div className="video-plane" aria-hidden="true">
