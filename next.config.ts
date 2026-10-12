@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const nextConfig: NextConfig = {
+  distDir: process.env.NEXT_PREVIEW_BUILD_DIR || ".next",
   output: "export",
   devIndicators: false,
   basePath,

@@ -6,3 +6,6 @@ dist
 .env*
 *.log
 qa-screenshots
+.next-build
+.next-export
+qa/
