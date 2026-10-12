@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./portfolio.css";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export const metadata: Metadata = {
+  icons: { icon: `${basePath}/icon.svg` },
   title: "Vishal Dhuper | Creative Marketing Professional",
   description:
     "Personal homepage for Vishal Dhuper, a London-based creative marketing and media intelligence professional.",
