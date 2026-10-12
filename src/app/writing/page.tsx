@@ -1,60 +1,27 @@
 import type { Metadata } from "next";
-
-import { InteriorPage } from "@/components/interior-page";
 import { SiteShell } from "@/components/site-shell";
+import { ChapterLabel, PageFooter, PageHeading } from "@/components/portfolio";
+import { StoryIndex } from "@/components/story-index";
+import { WordStudy } from "@/components/word-study";
+import { essays, readTime } from "@/lib/writing";
+import { sitePath } from "@/lib/paths";
 
-export const metadata: Metadata = {
-  title: "Writing",
-  description: "Writing, content thinking, and strategy notes by Vishal Dhuper.",
-};
-
-const writingItems = [
-  {
-    title: "Greenwashing, Without The Fog",
-    description:
-      "My Kingston dissertation looked at sustainable fashion claims and the fragile moment where belief either arrives or quietly leaves.",
-    meta: "Research",
-  },
-  {
-    title: "The Sentence Under The Chart",
-    description:
-      "The part I care about in reports: the one line that makes the finding obvious without making it feel flattened.",
-    meta: "Insights",
-  },
-  {
-    title: "Hooks That Earn A Click",
-    description:
-      "At Tealfeed, writing meant building better doors: useful headlines, search-friendly angles and reasons to keep reading.",
-    meta: "Content",
-  },
-  {
-    title: "After The Campaign",
-    description:
-      "The honest note after the rush: what travelled, what dragged, what surprised us, and what the next brief should inherit.",
-    meta: "Learning",
-  },
-  {
-    title: "Brand Lines",
-    description:
-      "I like the sentence a brand can return to. Plain enough to say out loud, specific enough to be worth keeping.",
-    meta: "Positioning",
-  },
-  {
-    title: "The Last Pass",
-    description:
-      "Cut the wobble. Keep the pulse. Make the paragraph sound like a person thought about it, not like a template escaped.",
-    meta: "Editing",
-  },
-];
+export const metadata: Metadata = { title: "Writing | Vishal Dhuper", description: "Research, field notes and a few thoughts about what words leave out. Writing by Vishal Dhuper." };
 
 export default function WritingPage() {
-  return (
-    <SiteShell>
-      <InteriorPage
-        title="Writing"
-        description="Writing is where I make the messy thing behave. Not by making it fancy; by making it smaller, truer, and easier to carry."
-        items={writingItems}
-      />
-    </SiteShell>
-  );
+  const featured = essays[0];
+  return <SiteShell><main className="portfolio portfolio-writing" id="main-content" tabIndex={-1}>
+    <PageHeading title="Writing" folio="Research / Practice / Notebook">Usually a question I can&apos;t leave alone.<br />Sometimes an answer. Often <em>a better question.</em></PageHeading>
+    <section className="featured-writing" aria-labelledby="featured-title">
+      <ChapterLabel number="01">Research / {readTime(featured)}</ChapterLabel>
+      <div className="essay-feature">
+        <div className="feature-introduction"><h2 id="featured-title"><a href={sitePath(`/writing/${featured.slug}/`)}>{featured.title}</a></h2><p>{featured.excerpt}</p><a className="text-link" href={sitePath(`/writing/${featured.slug}/`)}>Read the essay <span aria-hidden="true">&#8599;</span></a><p className="source-caption">Adapted from my MSc dissertation.<br />Kingston University, London.</p></div>
+        <WordStudy kind="writing" />
+      </div>
+      <blockquote className="essay-line"><p>Don&apos;t make the promise bigger than the proof.</p><footer>A line from the essay.</footer></blockquote>
+    </section>
+    <section className="writing-index" aria-labelledby="notes-title"><div className="section-running-title"><h2 id="notes-title">Notes from the work.</h2><span>Two shorter thoughts.</span></div><StoryIndex entries={essays.slice(1).map((essay, index) => ({ number: index + 2, href: `/writing/${essay.slug}/`, eyebrow: `${essay.category} / ${essay.format.split(" / ")[0]}`, title: essay.title, excerpt: essay.excerpt, meta: readTime(essay) }))} /></section>
+    <p className="editorial-note">The research piece comes from my dissertation. The shorter notes are new portfolio drafts, not previously published articles.</p>
+    <PageFooter next="Away from the work" href="/moments/" />
+  </main></SiteShell>;
 }
