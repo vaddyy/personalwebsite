@@ -35,7 +35,7 @@ export function WordStudy({ kind }: { kind: keyof typeof studies }) {
     <div className="word-study" data-study={kind}>
       <p className="eyebrow">{study.label}</p>
       <div className="word-sentence" role="group" aria-label={study.label}>
-        {kind === "work" ? <>{word(0)} is {word(1)} about {word(2)}.</> : <>A {study.notes.map((note, i) => <Fragment key={note.word}>{word(i)}{i < 2 ? ", " : " "}</Fragment>)}choice.</>}
+        {kind === "work" ? <>{word(0)} is {word(1)} about <span className="word-unit">{word(2)}.</span></> : <>A {study.notes.map((note, i) => <Fragment key={note.word}><span className="word-unit">{word(i)}{i < 2 ? "," : ""}</span> </Fragment>)}choice.</>}
       </div>
       <div className="word-notes" id={`${id}-notes`} aria-live="polite" aria-atomic="true">
         {study.notes.map((note, index) => <div className="word-note" key={note.word} data-active={active === index} aria-hidden={active !== index} inert={active !== index}><p className="word-question">{note.title}</p><p>{note.text}</p></div>)}

@@ -5,7 +5,7 @@ import { SiteShell } from "@/components/site-shell";
 export default function Home() {
   return (
     <RevealProvider>
-      <SiteShell showCounter withVideo>
+      <SiteShell showCounter isHome>
         <HeroStatement />
       </SiteShell>
     </RevealProvider>

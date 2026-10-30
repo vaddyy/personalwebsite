@@ -29,9 +29,9 @@ export default async function WorkStoryPage({ params }: { params: Promise<{ slug
   return (
     <SiteShell>
       <main className="portfolio work-story-page" id="main-content" tabIndex={-1}>
-        <a className="back-link" href={sitePath(`/work/#${story.group === "selected" ? "selected" : "earlier"}`)}><span aria-hidden="true">&#8592;</span> All work</a>
         <article className={`essay-article work-story${story.exhibit ? " work-story-wide" : ""}`}>
           <header>
+            <a className="back-link" href={sitePath(`/work/#${story.group === "selected" ? "selected" : "earlier"}`)}><span aria-hidden="true">&#8592;</span> All work</a>
             <p className="eyebrow">{story.group === "selected" ? story.company : "An earlier chapter"} / {story.period}</p>
             <h1>{story.title || story.company}</h1>
             <p className="essay-deck">{story.introduction}</p>
@@ -47,7 +47,7 @@ export default async function WorkStoryPage({ params }: { params: Promise<{ slug
           </div>
           <footer className="essay-provenance"><h2>About this chapter</h2><p>{story.sourceNote}</p></footer>
         </article>
-        <PageFooter next={`Next chapter / ${next.company}`} href={`/work/${next.slug}/`} />
+        <PageFooter label="Next chapter" next={next.company} href={`/work/${next.slug}/`} className="reading-footer" />
       </main>
     </SiteShell>
   );

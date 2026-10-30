@@ -42,8 +42,7 @@
   --study-height: 496px;
   --report-height: 440px;
   --feature-title-width: 440px;
-  --type-essay-title: 30px;
-  --line-reading: 1.65;
+  --line-reading: 1.55;
   --line-code: 1.7;
   --chart-height: 160px;
   --rule-width: 1px;
@@ -63,7 +62,9 @@
 .portfolio em { font-family: var(--font-serif); font-style: italic; font-weight: 400; }
 .portfolio-heading { display: flex; justify-content: space-between; gap: var(--s-7); margin-bottom: var(--s-9); }
 .portfolio-heading h1 { margin-bottom: var(--s-3); font: 400 var(--type-title)/var(--line-tight) var(--font-serif); }
-.portfolio-intro { max-width: var(--reading-width); font-size: var(--type-intro); line-height: var(--line-intro); }
+.portfolio-intro { max-width: var(--reading-width); font-size: var(--type-intro); line-height: var(--line-intro); text-wrap: pretty; }
+/* Intro line breaks are a desktop rhythm; on phones they strand single words. */
+.intro-break { display: none; }
 .folio { display: none; flex: 0 0 auto; text-align: right; color: var(--muted-text); font-size: var(--type-caption); line-height: var(--line-body); }
 .portfolio h2 { font-size: var(--type-chapter); line-height: var(--line-tight); font-weight: 400; }
 .chapter-index { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-3); border-top: var(--rule-width) solid var(--rule); padding: var(--s-4) 0; margin-bottom: var(--s-9); font-size: var(--type-label); }
@@ -179,10 +180,11 @@
 .work-process li > span { color: var(--accent); font-size: var(--type-small); }
 .work-process h2 { font-size: var(--type-label); margin: var(--s-3) 0 var(--s-2); }
 .work-process p { color: var(--muted-text); font-size: var(--type-caption); line-height: var(--line-body); }
-.essay-article.work-story h1 { font-size: var(--type-title); }
 .portfolio-footer { margin-top: var(--s-11); padding-top: var(--s-6); border-top: var(--rule-width) solid var(--rule); display: flex; flex-wrap: wrap; gap: var(--s-6); align-items: baseline; justify-content: space-between; }
 .next-link { font: 400 var(--type-intro)/var(--line-tight) var(--font-serif); text-decoration: none; }
 .next-link > span { display: inline-block; margin-left: var(--s-3); font-family: var(--font-sans); }
+.next-link > .next-label { display: block; margin: 0 0 var(--s-2); font: 400 var(--type-caption)/var(--line-body) var(--font-sans); color: var(--muted-text); }
+.reading-footer { max-width: var(--reading-width); margin-left: auto; margin-right: auto; }
 .footer-links { display: flex; gap: var(--s-5); font-size: var(--type-caption); color: var(--muted-text); }
 .footer-links a { text-decoration: none; }
 .portfolio a, .portfolio summary { transition: color var(--motion-fast) ease; }
@@ -219,14 +221,16 @@
 .editorial-note, .photo-note { border-top: var(--rule-width) solid var(--rule); padding-top: var(--s-6); margin-top: var(--s-6); max-width: var(--reading-width); }
 .back-link { display: inline-flex; gap: var(--s-3); align-items: center; text-decoration: none; font-size: var(--type-label); margin-bottom: var(--s-9); }
 .essay-article { max-width: var(--reading-width); margin: 0 auto; }
-.essay-article h1 { font: 400 var(--type-essay-title)/var(--line-tight) var(--font-serif); margin-bottom: var(--s-6); text-wrap: balance; }
+.essay-article h1 { font: 400 var(--type-title)/var(--line-tight) var(--font-serif); margin-bottom: var(--s-6); text-wrap: balance; }
 .essay-deck { font-size: var(--type-intro); line-height: var(--line-intro); color: var(--muted-text); }
 .essay-byline { margin: var(--s-7) 0 var(--s-10); border-top: var(--rule-width) solid var(--rule); padding-top: var(--s-4); display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s-3); font-size: var(--type-caption); }
 .essay-byline span { color: var(--muted-text); }
 .essay-body { font-size: var(--type-body); line-height: var(--line-reading); }
+.essay-body p { text-wrap: pretty; }
 .essay-body p + p { margin-top: var(--s-6); }
 .essay-body section + section { margin-top: var(--s-9); }
-.essay-body h2 { font: 400 var(--type-intro)/var(--line-tight) var(--font-serif); margin-bottom: var(--s-6); }
+/* Headings sit closer to their own text than to the section before. */
+.essay-body h2 { font: 400 var(--type-intro)/var(--line-tight) var(--font-serif); margin-bottom: var(--s-4); text-wrap: balance; }
 .essay-provenance { border-top: var(--rule-width) solid var(--rule); margin-top: var(--s-10); padding-top: var(--s-6); }
 .essay-provenance h2 { font-size: var(--type-label); margin-bottom: var(--s-3); }
 .essay-provenance p { color: var(--muted-text); font-size: var(--type-caption); line-height: var(--line-body); }
@@ -239,7 +243,7 @@
 .collection-nav span { color: var(--muted-text); font-size: var(--type-small); align-self: center; }
 .work-selection { scroll-margin-top: var(--s-11); }
 .work-feature, .essay-feature { display: grid; gap: var(--s-9); margin-bottom: var(--s-9); }
-.feature-introduction h2 { margin-bottom: var(--s-5); max-width: var(--feature-title-width); }
+.feature-introduction h2 { margin-bottom: var(--s-5); max-width: var(--feature-title-width); text-wrap: balance; }
 .feature-introduction h2 a { text-decoration: none; }
 .feature-introduction > p:not(.source-caption) { font-size: var(--type-body); line-height: var(--line-body); color: var(--muted-text); margin-bottom: var(--s-6); max-width: var(--feature-title-width); }
 .feature-introduction .source-caption { margin-top: var(--s-6); }
@@ -247,6 +251,8 @@
 .word-study .eyebrow { margin-bottom: var(--s-4); }
 .word-sentence { font-size: var(--type-word); line-height: var(--line-body); }
 .word-choice { font: inherit; font-size: var(--word-scale); line-height: var(--line-tight); padding: var(--word-padding); color: var(--light-text); background: transparent; border: var(--rule-width) solid var(--muted-text); border-radius: var(--word-radius); cursor: pointer; white-space: nowrap; transition: color var(--motion-fast) ease, background-color var(--motion-fast) ease, border-color var(--motion-fast) ease; }
+/* A word and its punctuation never split across lines. */
+.word-unit { white-space: nowrap; }
 .word-choice[aria-pressed="true"] { color: var(--ink); background: var(--light-text); border-color: var(--light-text); }
 .word-choice:hover:not([aria-pressed="true"]) { color: var(--accent); border-color: var(--accent); }
 /* Inactive notes reserve the longest note's space without entering the accessibility tree. */
@@ -273,10 +279,13 @@
 .essay-line p { font: italic 400 var(--type-intro)/var(--line-body) var(--font-serif); }
 .essay-line footer { color: var(--muted-text); font-size: var(--type-caption); margin-top: var(--s-3); }
 .article-contents { margin-bottom: var(--s-9); }
-.reading-contents { list-style: none; display: grid; gap: var(--s-4); }
-.reading-contents a { display: grid; grid-template-columns: var(--s-7) 1fr; gap: var(--s-3); text-decoration: none; color: var(--muted-text); font-size: var(--type-label); line-height: var(--line-body); }
+.article-contents .details-body { padding: 0 0 var(--s-6); }
+.contents-count { margin-left: auto; color: var(--muted-text); font-size: var(--type-caption); }
+/* Same 40px row pitch as before, but the padding makes each whole row the tap target. */
+.reading-contents { list-style: none; display: grid; }
+.reading-contents a { display: grid; grid-template-columns: var(--s-7) 1fr; gap: var(--s-3); padding: var(--s-2) 0; text-decoration: none; color: var(--muted-text); font-size: var(--type-label); line-height: var(--line-body); }
 .reading-contents span { color: var(--accent); font-size: var(--type-small); padding-top: var(--s-1); }
-.essay-body section { scroll-margin-top: var(--s-11); }
+.essay-body section { scroll-margin-top: var(--s-12); }
 .essay-body section:target h2 { color: var(--accent); }
 .work-story-wide { max-width: none; }
 .work-story-wide > header, .work-story-wide > .article-contents, .work-story-wide > .essay-body, .work-story-wide > .essay-provenance { max-width: var(--reading-width); margin-left: auto; margin-right: auto; }
@@ -289,8 +298,9 @@
 .moment-piece + .moment-piece { margin-top: var(--s-11); border-top: var(--rule-width) solid var(--rule); padding-top: var(--s-8); }
 
 @media (min-width: 768px) {
-  :root { --portfolio-gutter: 32px; --page-top: 200px; --type-body: 20px; --type-intro: 24px; --type-title: 35px; --type-chapter: 36px; --type-art: 44px; --type-cover: 64px; --line-intro: 30px; --study-height: 360px; --type-essay-title: 44px; --report-height: 480px; }
+  :root { --portfolio-gutter: 32px; --page-top: 200px; --type-body: 20px; --type-intro: 24px; --type-title: 35px; --type-art: 44px; --type-cover: 64px; --line-intro: 30px; --study-height: 360px; --report-height: 480px; }
   .folio { display: block; padding-top: var(--s-2); }
+  .intro-break { display: inline; }
   .portfolio-heading { margin-bottom: var(--s-10); }
   .chapter-index { display: flex; gap: var(--s-9); margin-bottom: var(--s-10); }
   .chapter-heading, .moment-heading { grid-template-columns: 1fr 1fr; gap: var(--s-9); margin-bottom: var(--s-8); }
@@ -320,6 +330,8 @@
   .essay-row h3 { font-size: var(--type-intro); }
   .essay-excerpt { max-width: var(--reading-width); }
   .portfolio-footer { margin-top: var(--s-12); }
+  :root { --line-reading: 1.65; }
+  .essay-body section + section { margin-top: var(--s-10); }
   :root { --type-word: 36px; }
   .collection-nav { margin-bottom: var(--s-10); }
   .work-feature, .essay-feature { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--s-11); margin-bottom: var(--s-10); }
@@ -334,6 +346,26 @@
   .work-exhibit { margin: var(--s-10) 0 var(--s-11); }
 }
 @media (min-width: 1024px) { :root { --type-cover: 72px; } }
+
+/* Phones only: larger tap areas, roomier word studies and full-width story rows. Desktop rules are untouched. */
+@media (max-width: 767px) {
+  .portfolio p { text-wrap: pretty; }
+  .portfolio h2, .portfolio h3, .next-link { text-wrap: balance; }
+  /* Invisible hit areas reach about 44px without moving any text. */
+  .text-link, .back-link, .collection-nav a, .footer-links a, .next-link, .word-choice { position: relative; }
+  .text-link::after, .back-link::after, .collection-nav a::after, .footer-links a::after, .next-link::after { content: ""; position: absolute; inset: calc(var(--s-3) * -1) 0; }
+  .word-choice::after { content: ""; position: absolute; inset: calc(var(--s-1) * -1) 0; }
+  .word-sentence { line-height: 1.8; text-wrap: balance; }
+  /* Number, eyebrow and arrow share the first line so the title and excerpt get the full width. */
+  .story-row { grid-template-columns: auto minmax(0, 1fr) auto; grid-template-areas: "number eyebrow arrow" "title title title" "excerpt excerpt excerpt" "meta meta meta"; row-gap: 0; align-items: baseline; }
+  .story-copy { display: contents; }
+  .story-number { grid-area: number; padding-top: 0; }
+  .story-copy .eyebrow { grid-area: eyebrow; }
+  .story-copy h3 { grid-area: title; }
+  .story-excerpt { grid-area: excerpt; }
+  .story-meta { grid-area: meta; margin-top: var(--s-3); }
+  .story-arrow { grid-area: arrow; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .site-header, .reveal-content[data-state="open"] { animation: none; }
