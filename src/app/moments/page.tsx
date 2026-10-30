@@ -7,7 +7,7 @@ export const metadata: Metadata = { title: "Moments | Vishal Dhuper", descriptio
 
 export default function MomentsPage() {
   return <SiteShell><main className="portfolio portfolio-moments" id="main-content" tabIndex={-1}>
-    <PageHeading title="Moments" folio="Away from the work">Not everything needs a brief.<br />Some things are just <em>good parts of a day.</em></PageHeading>
+    <PageHeading title="Moments" folio="Away from the work">Not everything needs a brief. <br className="intro-break" />Some things are just good parts of a day.</PageHeading>
     <section className="moment-piece" aria-labelledby="coffee-title">
       <ChapterLabel number="01">Usually starts here</ChapterLabel>
       <div className="moment-text"><h2 id="coffee-title">Just a coffee.<br /><em>Famous last words.</em></h2><div><p>I usually go in for one thing. Then there&apos;s a good table, something in the pastry case, and suddenly I&apos;m staying a little longer.</p><p>The coffee matters. So does having nowhere urgent to be for the next twenty minutes.</p><a className="text-link" href={profileLinks.broonbrown} target="_blank" rel="noreferrer">The coffee gets its own page / @broonbrown <span aria-hidden="true">&#8599;</span></a></div></div>

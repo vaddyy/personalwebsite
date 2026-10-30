@@ -14,7 +14,7 @@ export default function WorkPage() {
   const featured = selected[0];
   return (
     <SiteShell><main className="portfolio portfolio-work" id="main-content" tabIndex={-1}>
-      <PageHeading title="Work" folio="Selected work / 01-05">I spend a lot of time with things people say. The interesting part is finding <em>the story worth telling.</em></PageHeading>
+      <PageHeading title="Work" folio="Selected work / 01-05">I spend a lot of time with things people say. The interesting part is finding the story worth telling.</PageHeading>
       <nav className="collection-nav" aria-label="Work chapters"><a href="#selected">Selected work <span>01-03</span></a><a href="#earlier">Earlier chapters <span>04-05</span></a></nav>
       <section className="work-selection" id="selected" aria-labelledby="listening-title">
         <ChapterLabel number="01">Brandwatch / Social listening</ChapterLabel>

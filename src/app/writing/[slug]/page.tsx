@@ -26,9 +26,9 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
   return (
     <SiteShell>
       <main className="portfolio essay-page" id="main-content" tabIndex={-1}>
-        <a className="back-link" href={sitePath("/writing/")}><span aria-hidden="true">&#8592;</span> All writing</a>
         <article className="essay-article">
           <header>
+            <a className="back-link" href={sitePath("/writing/")}><span aria-hidden="true">&#8592;</span> All writing</a>
             <p className="eyebrow">{essay.category} / {readTime(essay)}</p>
             <h1>{essay.title}</h1>
             <p className="essay-deck">{essay.excerpt}</p>
@@ -45,7 +45,7 @@ export default async function EssayPage({ params }: { params: Promise<{ slug: st
           </div>
           <footer className="essay-provenance"><h2>About this piece</h2><p>{essay.provenance}</p></footer>
         </article>
-        <PageFooter next={`Next / ${next.title}`} href={`/writing/${next.slug}/`} />
+        <PageFooter label="Next essay" next={next.title} href={`/writing/${next.slug}/`} className="reading-footer" />
       </main>
     </SiteShell>
   );

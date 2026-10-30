@@ -11,7 +11,7 @@ export function ChapterLabel({ number, children }: { number: string; children: R
   return <p className="chapter-label"><span>{number}</span>{children}</p>;
 }
 
-export function CaseDetails({ children, label = "Inside the work" }: { children: ReactNode; label?: string }) {
+export function CaseDetails({ children, label = "Inside the work" }: { children: ReactNode; label?: ReactNode }) {
   return <details className="case-details"><summary>{label}<span aria-hidden="true" className="details-mark" /></summary><div className="details-body">{children}</div></details>;
 }
 
@@ -20,13 +20,14 @@ export function RoleNote({ title, children }: { title: string; children: ReactNo
 }
 
 export function ArticleContents({ items, label = "In this piece" }: { items: { href: string; title: string }[]; label?: string }) {
-  return <div className="article-contents"><CaseDetails label={label}><nav aria-label={label}><ol className="reading-contents">{items.map((item, i) => <li key={item.href}><a href={item.href}><span>{String(i + 1).padStart(2, "0")}</span>{item.title}</a></li>)}</ol></nav></CaseDetails></div>;
+  const count = `${items.length} ${items.length === 1 ? "section" : "sections"}`;
+  return <div className="article-contents"><CaseDetails label={<>{label}<span className="contents-count">{count}</span></>}><nav aria-label={label}><ol className="reading-contents">{items.map((item, i) => <li key={item.href}><a href={item.href}><span>{String(i + 1).padStart(2, "0")}</span>{item.title}</a></li>)}</ol></nav></CaseDetails></div>;
 }
 
 export function PortfolioImage({ name, alt, width, height, priority = false, className = "" }: { name: string; alt: string; width: number; height: number; priority?: boolean; className?: string }) {
   return <Image className={`portfolio-image ${className}`} src={sitePath(`/images/${name}`)} alt={alt} width={width} height={height} unoptimized priority={priority} />;
 }
 
-export function PageFooter({ next, href }: { next: string; href: string }) {
-  return <footer className="portfolio-footer"><a href={sitePath(href)} className="next-link">{next}<span aria-hidden="true">&#8599;</span></a><div className="footer-links"><a href={profileLinks.email}>Email</a><a href={profileLinks.linkedin} target="_blank" rel="noreferrer">LinkedIn</a><a href={profileLinks.instagram} target="_blank" rel="noreferrer">Instagram</a></div></footer>;
+export function PageFooter({ next, href, label, className = "" }: { next: string; href: string; label?: string; className?: string }) {
+  return <footer className={`portfolio-footer ${className}`}><a href={sitePath(href)} className="next-link">{label && <span className="next-label">{label}</span>}{next}<span aria-hidden="true">&#8599;</span></a><div className="footer-links"><a href={profileLinks.email}>Email</a><a href={profileLinks.linkedin} target="_blank" rel="noreferrer">LinkedIn</a><a href={profileLinks.instagram} target="_blank" rel="noreferrer">Instagram</a></div></footer>;
 }

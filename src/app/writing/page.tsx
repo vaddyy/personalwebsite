@@ -11,7 +11,7 @@ export const metadata: Metadata = { title: "Writing | Vishal Dhuper", descriptio
 export default function WritingPage() {
   const featured = essays[0];
   return <SiteShell><main className="portfolio portfolio-writing" id="main-content" tabIndex={-1}>
-    <PageHeading title="Writing" folio="Research / Practice / Notebook">Usually a question I can&apos;t leave alone.<br />Sometimes an answer. Often <em>a better question.</em></PageHeading>
+    <PageHeading title="Writing" folio="Research / Practice / Notebook">Usually a question I can&apos;t leave alone. <br className="intro-break" />Sometimes an answer. Often a better question.</PageHeading>
     <section className="featured-writing" aria-labelledby="featured-title">
       <ChapterLabel number="01">Research / {readTime(featured)}</ChapterLabel>
       <div className="essay-feature">
